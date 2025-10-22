@@ -35,12 +35,20 @@ template <typename Key, typename Val>
 Val ArrayListDictionary<Key, Val>::binSearchIter(const Key& target, int left, int right) const {
     // TODO
     while(left <= right){
+		numComps++;
         int s = (left+right)/2;
-        if(list[s] == target){
-            return (left+right)/2;
+		Record pair = list->getElement(s);
+        if(pair.k == target){
+            return pair.v;
         }
-        else if(target > list->getElement(s).k) left = s;
-        else right = s;
+        else if(target > pair.k){
+			numComps++;
+			left = s + 1;
+		}
+        else{
+			numComps++;
+			right = s - 1;
+		}
     }
     throw -1;
 }
@@ -52,18 +60,19 @@ Val ArrayListDictionary<Key, Val>::binSearchRec(const Key& target, int left, int
         numComps++;
         throw -1;
     }
+    numComps++;
     int s = (left+right)/2;
-    if(list[s] == target){
-        numComps++;
-        return s;
+	Record pair = list->getElement(s);
+    if(pair.k == target){
+        return pair.v;
     }
-    else if (target > list[s]){
+    else if (target > pair.k){
         numComps++;
-        return binSearchRec(target, s, right);
+        return binSearchRec(target, s + 1, right);
     }
     else{
         numComps++;
-        return binSearchRec(target, left, s);
+        return binSearchRec(target, left, s - 1);
     }
 }
 
@@ -82,10 +91,10 @@ Val ArrayListDictionary<Key, Val>::find(const Key& k) const {
     numComps = 0;
 
     try {
-        return seqSearchIter(k);
+        // return seqSearchIter(k);
         // return seqSearchRec(k);
         // return binSearchIter(k, 0, list->getLength() - 1);
-        // return binSearchRec(k, 0, list->getLength() - 1);
+        return binSearchRec(k, 0, list->getLength() - 1);
     }
     catch (...) {
         throw string("find: error, unsuccessful search, target key not found");
