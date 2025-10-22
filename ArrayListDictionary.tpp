@@ -1,3 +1,10 @@
+/*
+TODO List:
+[ ] bin iter
+[ ] bin rec
+[x] seq iter
+[x] seq rec
+*/
 template <typename Key, typename Val>
 unsigned ArrayListDictionary<Key, Val>::numComps = 0;
 
@@ -27,11 +34,37 @@ ArrayListDictionary<Key, Val>::~ArrayListDictionary() {
 template <typename Key, typename Val>
 Val ArrayListDictionary<Key, Val>::binSearchIter(const Key& target, int left, int right) const {
     // TODO
+    while(left <= right){
+        int s = (left+right)/2;
+        if(list[s] == target){
+            return (left+right)/2;
+        }
+        else if(target > list->getElement(s).k) left = s;
+        else right = s;
+    }
+    throw -1;
 }
 
 template <typename Key, typename Val>
 Val ArrayListDictionary<Key, Val>::binSearchRec(const Key& target, int left, int right) const {
     // TODO
+    if(left > right){
+        numComps++;
+        throw -1;
+    }
+    int s = (left+right)/2;
+    if(list[s] == target){
+        numComps++;
+        return s;
+    }
+    else if (target > list[s]){
+        numComps++;
+        return binSearchRec(target, s, right);
+    }
+    else{
+        numComps++;
+        return binSearchRec(target, left, s);
+    }
 }
 
 template <typename Key, typename Val>
@@ -89,11 +122,29 @@ void ArrayListDictionary<Key, Val>::remove(const Key& k) {
 template <typename Key, typename Val>
 Val ArrayListDictionary<Key, Val>::seqSearchIter(const Key& target) const {
     // TODO
+
+    // going through the entire list element by element
+
+    int len = list->getLength();
+    for(int i = 0; i < len; i++){
+		numComps++;
+		Record pair = list->getElement(i);
+        if (pair.k == target){
+            return pair.v;
+        }
+    }
+	throw string("error: Key not in dict");
+
 }
 
 template <typename Key, typename Val>
 Val ArrayListDictionary<Key, Val>::seqSearchRec(const Key& target, int i) const {
     // TODO
+	if(i == size()) throw string ("error: key not in dict");
+	numComps++;
+	if(list->getElement(i).k == target) return list->getElement(i).v;
+		
+	return seqSearchRec(target, i + 1);
 }
 
 template <typename Key, typename Val>
