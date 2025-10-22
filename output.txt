@@ -1,0 +1,113 @@
+./main
+
+seqIterative
+
+Enter a key to search my dictionary (or -1 to stop): banana
+a fruit that many like, or a phone
+Number of key comparisons: 1
+Enter a key to search my dictionary (or -1 to stop): cactus
+a pointy plant
+Number of key comparisons: 2
+Enter a key to search my dictionary (or -1 to stop): dog
+a domesticated fluff ball
+Number of key comparisons: 3
+Enter a key to search my dictionary (or -1 to stop): graph
+an awesome data structure!
+Number of key comparisons: 4
+Enter a key to search my dictionary (or -1 to stop): haskell
+fantastic programming language, go learn it
+Number of key comparisons: 5
+Enter a key to search my dictionary (or -1 to stop): igloo
+a cool house
+Number of key comparisons: 6
+Enter a key to search my dictionary (or -1 to stop): phoenix
+a bird on fire
+Number of key comparisons: 7
+Enter a key to search my dictionary (or -1 to stop): quack
+said Mr. Duck
+Number of key comparisons: 8
+Enter a key to search my dictionary (or -1 to stop): -1
+
+seqRecursive
+
+Enter a key to search my dictionary (or -1 to stop): banana
+a fruit that many like, or a phone
+Number of key comparisons: 1
+Enter a key to search my dictionary (or -1 to stop): cactus
+a pointy plant
+Number of key comparisons: 2
+Enter a key to search my dictionary (or -1 to stop): dog
+a domesticated fluff ball
+Number of key comparisons: 3
+Enter a key to search my dictionary (or -1 to stop): graph
+an awesome data structure!
+Number of key comparisons: 4
+Enter a key to search my dictionary (or -1 to stop): haskell
+fantastic programming language, go learn it
+Number of key comparisons: 5
+Enter a key to search my dictionary (or -1 to stop): igloo
+a cool house
+Number of key comparisons: 6
+Enter a key to search my dictionary (or -1 to stop): phoenix
+a bird on fire
+Number of key comparisons: 7
+Enter a key to search my dictionary (or -1 to stop): quack
+said Mr. Duck
+Number of key comparisons: 8
+Enter a key to search my dictionary (or -1 to stop): -1
+
+binIterative:
+
+Enter a key to search my dictionary (or -1 to stop): banana
+a fruit that many like, or a phone
+Number of key comparisons: 5
+Enter a key to search my dictionary (or -1 to stop): cactus
+a pointy plant
+Number of key comparisons: 3
+Enter a key to search my dictionary (or -1 to stop): dog
+a domesticated fluff ball
+Number of key comparisons: 5
+Enter a key to search my dictionary (or -1 to stop): graph
+an awesome data structure!
+Number of key comparisons: 1
+Enter a key to search my dictionary (or -1 to stop): haskell
+fantastic programming language, go learn it
+Number of key comparisons: 5
+Enter a key to search my dictionary (or -1 to stop): igloo
+a cool house
+Number of key comparisons: 3
+Enter a key to search my dictionary (or -1 to stop): phoenix
+a bird on fire
+Number of key comparisons: 5
+Enter a key to search my dictionary (or -1 to stop): quack
+said Mr. Duck
+Number of key comparisons: 7
+Enter a key to search my dictionary (or -1 to stop): -1
+
+binRecursive: 
+
+Enter a key to search my dictionary (or -1 to stop): banana
+a fruit that many like, or a phone
+Number of key comparisons: 5
+Enter a key to search my dictionary (or -1 to stop): cactus
+a pointy plant
+Number of key comparisons: 3
+Enter a key to search my dictionary (or -1 to stop): dog
+a domesticated fluff ball
+Number of key comparisons: 5
+Enter a key to search my dictionary (or -1 to stop): graph
+an awesome data structure!
+Number of key comparisons: 1
+Enter a key to search my dictionary (or -1 to stop): haskell
+fantastic programming language, go learn it
+Number of key comparisons: 5
+Enter a key to search my dictionary (or -1 to stop): igloo
+a cool house
+Number of key comparisons: 3
+Enter a key to search my dictionary (or -1 to stop): phoenix
+a bird on fire
+Number of key comparisons: 5
+Enter a key to search my dictionary (or -1 to stop): quack
+said Mr. Duck
+Number of key comparisons: 7
+Enter a key to search my dictionary (or -1 to stop): -1
